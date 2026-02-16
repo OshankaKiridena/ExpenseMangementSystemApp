@@ -1,22 +1,33 @@
 package com.example.expensemanager.utils
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.AttachMoney
+import androidx.compose.material.icons.filled.ContentCut
+import androidx.compose.material.icons.filled.DirectionsCar
+import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.LocalGasStation
+import androidx.compose.material.icons.filled.LocalHospital
+import androidx.compose.material.icons.filled.Movie
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.ShoppingBag
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.SignalCellularAlt
+import androidx.compose.material.icons.filled.Tv
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.Color
 
 object CategoryIcons {
     fun getIconForCategory(category: String): ImageVector {
         return when (category.lowercase()) {
-            "food" -> Icons.Filled.Restaurant
+            "food" -> Icons.Filled.Tv
             "transport" -> Icons.Filled.DirectionsCar
             "groceries" -> Icons.Filled.ShoppingCart
-            "internet bill" -> Icons.Filled.Wifi
-            "mobile recharge" -> Icons.Filled.PhoneIphone
+            "internet bill" -> Icons.Filled.SignalCellularAlt
+            "mobile recharge" -> Icons.Filled.Phone
             "movie tickets" -> Icons.Filled.Movie
-            "restaurant" -> Icons.Filled.Restaurant
+            "restaurant" -> Icons.Filled.Tv
             "fuel" -> Icons.Filled.LocalGasStation
-            "electricity bill" -> Icons.Filled.Lightbulb
+            "electricity bill" -> Icons.Filled.FavoriteBorder
             "shopping" -> Icons.Filled.ShoppingBag
             "doctor visit" -> Icons.Filled.LocalHospital
             "haircut" -> Icons.Filled.ContentCut
@@ -42,4 +53,5 @@ object CategoryIcons {
         }
     }
 }
+
 
