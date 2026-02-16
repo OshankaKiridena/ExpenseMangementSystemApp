@@ -3,12 +3,14 @@ package com.example.expensemanager.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.example.expensemanager.R
@@ -57,7 +59,8 @@ fun RegisterScreen(onRegisterClick: () -> Unit, onLoginClick: () -> Unit) {
                 label = { Text("Full Name") },
                 modifier = Modifier
                     .fillMaxWidth(0.85f),
-                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
+                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -68,7 +71,8 @@ fun RegisterScreen(onRegisterClick: () -> Unit, onLoginClick: () -> Unit) {
                 label = { Text("Email") },
                 modifier = Modifier
                     .fillMaxWidth(0.85f),
-                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
+                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -79,7 +83,8 @@ fun RegisterScreen(onRegisterClick: () -> Unit, onLoginClick: () -> Unit) {
                 label = { Text("Password") },
                 modifier = Modifier
                     .fillMaxWidth(0.85f),
-                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
+                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -90,7 +95,8 @@ fun RegisterScreen(onRegisterClick: () -> Unit, onLoginClick: () -> Unit) {
                 label = { Text("Confirm Password") },
                 modifier = Modifier
                     .fillMaxWidth(0.85f),
-                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
+                textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
             )
 
             Spacer(modifier = Modifier.height(30.dp))
@@ -125,4 +131,6 @@ fun RegisterScreen(onRegisterClick: () -> Unit, onLoginClick: () -> Unit) {
         }
     }
 }
+
+
 
