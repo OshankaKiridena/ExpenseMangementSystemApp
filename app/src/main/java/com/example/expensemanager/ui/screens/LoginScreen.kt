@@ -4,6 +4,7 @@ import com.example.expensemanager.R
 
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -11,10 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LoginScreen(onLoginClick: () -> Unit) {
+fun LoginScreen(onLoginClick: () -> Unit, onRegisterClick: () -> Unit) {
     Box(modifier = Modifier.fillMaxSize()) {
 
         // 🔵 Wallpaper Image
@@ -66,6 +68,24 @@ fun LoginScreen(onLoginClick: () -> Unit) {
 
         Button(onClick = onLoginClick) {
             Text("Login")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                "Don't have an account? ",
+                color = MaterialTheme.colorScheme.onBackground
+            )
+            Text(
+                "Register",
+                color = MaterialTheme.colorScheme.primary,
+                textDecoration = TextDecoration.Underline,
+                modifier = Modifier.clickable { onRegisterClick() }
+            )
         }
     }
 }}
