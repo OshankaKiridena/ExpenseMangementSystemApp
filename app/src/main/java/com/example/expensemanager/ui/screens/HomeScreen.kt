@@ -18,7 +18,17 @@ fun HomeScreen(onItemClick: () -> Unit) {
 
     val expenses = listOf(
         Expense("Food", 1200.0, "2026-02-10"),
-        Expense("Transport", 500.0, "2026-02-09")
+        Expense("Transport", 500.0, "2026-02-09"),
+        Expense("Groceries", 2500.0, "2026-02-08"),
+        Expense("Internet Bill", 4500.0, "2026-02-07"),
+        Expense("Mobile Recharge", 800.0, "2026-02-06"),
+        Expense("Movie Tickets", 1500.0, "2026-02-05"),
+        Expense("Restaurant", 3200.0, "2026-02-04"),
+        Expense("Fuel", 2000.0, "2026-02-03"),
+        Expense("Electricity Bill", 3500.0, "2026-02-02"),
+        Expense("Shopping", 5000.0, "2026-02-01"),
+        Expense("Doctor Visit", 1000.0, "2026-01-31"),
+        Expense("Haircut", 500.0, "2026-01-30")
     )
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -37,6 +47,15 @@ fun HomeScreen(onItemClick: () -> Unit) {
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
+            item {
+                Text(
+                    "Your Expenses",
+                    style = MaterialTheme.typography.headlineMedium,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    modifier = Modifier.padding(bottom = 16.dp)
+                )
+            }
+
             items(expenses) { expense ->
                 Card(
                     modifier = Modifier
