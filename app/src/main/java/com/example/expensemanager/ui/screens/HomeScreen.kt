@@ -10,6 +10,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -87,7 +88,7 @@ fun HomeScreen(onItemClick: () -> Unit) {
                             Icon(
                                 imageVector = CategoryIcons.getIconForCategory(expense.title),
                                 contentDescription = expense.title,
-                                tint = androidx.compose.ui.graphics.Color.White,
+                                tint = Color.White,
                                 modifier = Modifier.size(32.dp)
                             )
                         }
