@@ -1,37 +1,37 @@
 package com.example.expensemanager.utils
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachMoney
-import androidx.compose.material.icons.filled.ContentCut
-import androidx.compose.material.icons.filled.DirectionsCar
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
-import androidx.compose.material.icons.filled.LocalGasStation
-import androidx.compose.material.icons.filled.LocalHospital
-import androidx.compose.material.icons.filled.Movie
-import androidx.compose.material.icons.filled.Phone
-import androidx.compose.material.icons.filled.ShoppingBag
-import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material.icons.filled.SignalCellularAlt
-import androidx.compose.material.icons.filled.Tv
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.Color
 
 object CategoryIcons {
     fun getIconForCategory(category: String): ImageVector {
         return when (category.lowercase()) {
-            "food" -> Icons.Filled.Tv
-            "transport" -> Icons.Filled.DirectionsCar
-            "groceries" -> Icons.Filled.ShoppingCart
-            "internet bill" -> Icons.Filled.SignalCellularAlt
-            "mobile recharge" -> Icons.Filled.Phone
-            "movie tickets" -> Icons.Filled.Movie
-            "restaurant" -> Icons.Filled.Tv
-            "fuel" -> Icons.Filled.LocalGasStation
-            "electricity bill" -> Icons.Filled.FavoriteBorder
-            "shopping" -> Icons.Filled.ShoppingBag
-            "doctor visit" -> Icons.Filled.LocalHospital
-            "haircut" -> Icons.Filled.ContentCut
-            else -> Icons.Filled.AttachMoney
+            "food" -> Icons.Filled.Star
+            "transport" -> Icons.Filled.Info
+            "groceries" -> Icons.Filled.Search
+            "internet bill" -> Icons.Filled.Settings
+            "mobile recharge" -> Icons.Filled.Add
+            "movie tickets" -> Icons.Filled.Share
+            "restaurant" -> Icons.Filled.Star
+            "fuel" -> Icons.Filled.Warning
+            "electricity bill" -> Icons.Filled.Favorite
+            "shopping" -> Icons.Filled.FavoriteBorder
+            "doctor visit" -> Icons.Filled.Home
+            "haircut" -> Icons.Filled.Delete
+            else -> Icons.Filled.Person
         }
     }
 
@@ -53,5 +53,6 @@ object CategoryIcons {
         }
     }
 }
+
 
 
